@@ -125,6 +125,6 @@ input::placeholder {
   display: block;
 }
 
-#total-messgage.hidden{
+total-message.hidden{
   display: none;
 }
