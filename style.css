@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0f0f0f; /* black background */
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #1f1f1f;
+  padding: 30px 20px;
+  border-radius: 20px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+h2 {
+  color: #ff4e6b;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+#headexpense.hidden{
+  display: none;
+}
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+#submit-btn {
+  background-color: #ff4e6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #e8435b;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  padding: 12px 16px;
+  background-color: #444;
+  color: white;
+  border-radius: 12px;
+  width: 100%;
+  word-wrap: break-word; /* Allow word wrapping */
+  word-break: break-word; /* In case of loooonggggggggg strings */
+  font-size: 15px;
+  margin-bottom: 20px;
+  gap: 30px;
+  box-sizing: border-box;
+  display: none;
+  column-gap: 30px;
+}
+.expense-name {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  text-align: center;
+  align-self: center;
+}
+
+
+.remove-btn {
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: center;
+}
+@media (max-width: 400px) {
+  .expense {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+  }
+}
+
+.remove-btn:hover {
+  background-color: rgb(185, 4, 4);
+}
+
+.expense.show{
+  display: block;
+}
+
+#total-messgage.hidden{
+  display: none;
+}
